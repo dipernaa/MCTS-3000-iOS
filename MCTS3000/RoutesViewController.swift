@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import ObjectMapper
 
-class SecondViewController: UIViewController {
+class RoutesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadRoutes()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +23,16 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func loadRoutes() {
+        
+        let getRoutes = GetRoutes()
+        getRoutes.request { [weak self] (object) -> () in
+            guard let object = object as? [String: AnyObject] else {
+                return
+            }
+            print(object)
+        }
+    }
 
 }
 
