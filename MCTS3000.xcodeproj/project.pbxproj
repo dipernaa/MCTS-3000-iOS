@@ -16,6 +16,8 @@
 		EAB1C7131CC923F900FE38D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB1C7121CC923F900FE38D5 /* Alamofire.framework */; };
 		EAB1C7151CC9240200FE38D5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB1C7141CC9240200FE38D5 /* ObjectMapper.framework */; };
 		EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7171CC926E300FE38D5 /* Endpoint.swift */; };
+		EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */; };
+		EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		EAB1C7121CC923F900FE38D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		EAB1C7141CC9240200FE38D5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		EAB1C7171CC926E300FE38D5 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
+		EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				EA6C6BEB1CC7F0BF00E2C278 /* LaunchScreen.storyboard */,
 				EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */,
 				EAB1C7171CC926E300FE38D5 /* Endpoint.swift */,
+				EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */,
+				EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */,
 			);
 			path = MCTS3000;
 			sourceTree = "<group>";
@@ -171,7 +177,9 @@
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
 				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
+				EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */,
 				EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */,
+				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

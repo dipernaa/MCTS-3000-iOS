@@ -10,7 +10,9 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class RoutesViewController: UIViewController {
+class RoutesViewController: UITableViewController {
+    
+    var routes: [RouteModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,26 @@ class RoutesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return routes?.count ?? 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("RouteCell", forIndexPath: indexPath) as? RouteCell else {
+            fatalError("THIS SHOULD NEVER HAPPEN")
+        }
+        
+        let route = routes?[indexPath.row]
+        
+        cell.lblTitle.text = route?.number ?? "no route number"
+        return cell
+    }
 
     func loadRoutes() {
         
@@ -30,7 +52,11 @@ class RoutesViewController: UIViewController {
             guard let object = object as? [String: AnyObject] else {
                 return
             }
-            print(object)
+            
+            let results = object["bustime-response"]
+            let acutalResults = results!["routes"]
+            self?.routes = Mapper<RouteModel>().mapArray(acutalResults)
+            print(acutalResults)
         }
     }
 
