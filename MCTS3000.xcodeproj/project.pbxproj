@@ -13,6 +13,8 @@
 		EA6C6BE81CC7F0BF00E2C278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE61CC7F0BF00E2C278 /* Main.storyboard */; };
 		EA6C6BEA1CC7F0BF00E2C278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */; };
 		EA6C6BED1CC7F0BF00E2C278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BEB1CC7F0BF00E2C278 /* LaunchScreen.storyboard */; };
+		EAB1C7131CC923F900FE38D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB1C7121CC923F900FE38D5 /* Alamofire.framework */; };
+		EAB1C7151CC9240200FE38D5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB1C7141CC9240200FE38D5 /* ObjectMapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA6C6BEC1CC7F0BF00E2C278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAB1C7121CC923F900FE38D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EAB1C7141CC9240200FE38D5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB1C7131CC923F900FE38D5 /* Alamofire.framework in Frameworks */,
+				EAB1C7151CC9240200FE38D5 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 		EA6C6BD41CC7F0BF00E2C278 = {
 			isa = PBXGroup;
 			children = (
+				EAB1C7141CC9240200FE38D5 /* ObjectMapper.framework */,
+				EAB1C7121CC923F900FE38D5 /* Alamofire.framework */,
 				EA6C6BDF1CC7F0BF00E2C278 /* MCTS3000 */,
 				EA6C6BDE1CC7F0BF00E2C278 /* Products */,
 			);
@@ -77,6 +85,7 @@
 				EA6C6BD91CC7F0BF00E2C278 /* Sources */,
 				EA6C6BDA1CC7F0BF00E2C278 /* Frameworks */,
 				EA6C6BDB1CC7F0BF00E2C278 /* Resources */,
+				EAB1C7161CC9242A00FE38D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +141,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAB1C7161CC9242A00FE38D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA6C6BD91CC7F0BF00E2C278 /* Sources */ = {
@@ -253,6 +280,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MCTS3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.msoe.se4910i.dipernaa.MCTS3000;
@@ -264,6 +295,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MCTS3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.msoe.se4910i.dipernaa.MCTS3000;
@@ -290,6 +325,7 @@
 				EA6C6BF31CC7F0BF00E2C278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
