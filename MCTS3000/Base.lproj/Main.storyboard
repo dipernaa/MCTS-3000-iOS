@@ -68,13 +68,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-kr-PSf">
-                                            <rect key="frame" x="59" y="8" width="534" height="21"/>
+                                            <rect key="frame" x="59" y="6" width="533" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-8D-lRX">
-                                            <rect key="frame" x="59" y="25" width="534" height="14"/>
+                                            <rect key="frame" x="59" y="23" width="533" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="RrO-99-22a" id="1He-cV-ACJ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Routes" id="4be-WP-Rag"/>
+                    <tabBarItem key="tabBarItem" title="Routes" image="second" id="4be-WP-Rag"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h92-T1-b8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,5 +121,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
