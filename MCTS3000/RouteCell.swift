@@ -6,10 +6,10 @@
 //  Copyright © 2016 MSOE SE-4910i. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class RouteCell: UITableViewCell {
-    
+    @IBOutlet weak var lblColor: UILabel!
     @IBOutlet weak var lblNumber: UILabel!
     @IBOutlet weak var lblName: UILabel!
 }
