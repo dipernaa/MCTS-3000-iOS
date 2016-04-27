@@ -40,7 +40,7 @@ class RoutesViewController: UITableViewController {
         
         let route = routes?[indexPath.row]
         
-        cell.lblColor.backgroundColor = hexStringToUIColor((route?.color)!) ?? UIColor.clearColor()
+        cell.viewColor.backgroundColor = hexStringToUIColor((route?.color)!) ?? UIColor.clearColor()
         cell.lblNumber.text = route?.number ?? "no route number"
         cell.lblName.text = route?.name ?? "no route name"
         return cell

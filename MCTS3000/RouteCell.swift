@@ -9,7 +9,7 @@
 import UIKit
 
 class RouteCell: UITableViewCell {
-    @IBOutlet weak var lblColor: UILabel!
+    @IBOutlet weak var viewColor: UIView!
     @IBOutlet weak var lblNumber: UILabel!
     @IBOutlet weak var lblName: UILabel!
 }
