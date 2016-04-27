@@ -54,7 +54,6 @@ class RoutesViewController: UITableViewController {
             }
             
             let results = object["bustime-response"]!["routes"]
-            print(results)
             self?.routes = Mapper<RouteModel>().mapArray(results)
             self?.tableView.reloadData()
             
