@@ -50,3 +50,20 @@ class GetRoutes: Endpoint {
     var endpoint = ROUTES_ENDPOINT
     var params = BASE_PARAMS
 }
+
+enum GetPredictions: Endpoint {
+    
+    case GetPredictions(String)
+    
+    var method: Alamofire.Method {
+        switch self {
+            case GetPredictions: return .GET
+        }
+    }
+    var endpoint = PREDICTIONS_ENDPOINT
+    var params: [String: AnyObject]? {
+        switch self {
+            
+        }
+    }
+}
