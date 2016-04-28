@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -83,17 +84,19 @@
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsZ-um-V6m">
                                             <rect key="frame" x="8" y="8" width="27.5" height="27.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="xsZ-um-V6m" secondAttribute="height" multiplier="1:1" id="GsF-ZC-ZLE"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ex5-no-9Nq" firstAttribute="leading" secondItem="xsZ-um-V6m" secondAttribute="trailing" constant="8" id="Gs6-38-gTY"/>
-                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="bottom" secondItem="2p7-00-WMU" secondAttribute="bottomMargin" id="HLZ-DB-oQe"/>
                                         <constraint firstItem="ex5-no-9Nq" firstAttribute="top" secondItem="2p7-00-WMU" secondAttribute="topMargin" id="Hma-m0-7ze"/>
-                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="leading" secondItem="2p7-00-WMU" secondAttribute="leadingMargin" id="NZA-qA-WaB"/>
                                         <constraint firstItem="ex5-no-9Nq" firstAttribute="leading" secondItem="xsZ-um-V6m" secondAttribute="trailing" constant="8" id="RIo-pl-SNp"/>
-                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="top" secondItem="2p7-00-WMU" secondAttribute="topMargin" id="T5w-Di-dNp"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="centerY" secondItem="2p7-00-WMU" secondAttribute="centerY" id="Vbe-w4-dJ4"/>
                                         <constraint firstItem="ex5-no-9Nq" firstAttribute="trailing" secondItem="2p7-00-WMU" secondAttribute="trailingMargin" id="j6p-J8-Feb"/>
                                         <constraint firstItem="ex5-no-9Nq" firstAttribute="bottom" secondItem="2p7-00-WMU" secondAttribute="bottomMargin" id="vUN-i5-l83"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="leading" secondItem="2p7-00-WMU" secondAttribute="leadingMargin" id="yxx-Mo-Ze7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
