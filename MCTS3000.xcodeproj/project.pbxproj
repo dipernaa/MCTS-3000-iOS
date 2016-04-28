@@ -16,6 +16,9 @@
 		EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7171CC926E300FE38D5 /* Endpoint.swift */; };
 		EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */; };
 		EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */; };
+		EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */; };
+		EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */; };
+		EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C75C1CD2651700FE38D5 /* Stop.swift */; };
 		F22C18B01CD2654000B16CE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18AF1CD2654000B16CE2 /* Alamofire.framework */; };
 		F22C18B21CD2654300B16CE2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,9 @@
 		EAB1C7171CC926E300FE38D5 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Stop+CoreDataProperties.swift"; path = "../Stop+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EAB1C75C1CD2651700FE38D5 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stop.swift; path = ../Stop.swift; sourceTree = "<group>"; };
 		F22C18AF1CD2654000B16CE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,18 +76,45 @@
 		EA6C6BDF1CC7F0BF00E2C278 /* MCTS3000 */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */,
-				EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */,
-				EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */,
-				EA6C6BE61CC7F0BF00E2C278 /* Main.storyboard */,
+				EAB1C7581CD2601F00FE38D5 /* Models */,
+				EAB1C75A1CD2603400FE38D5 /* Views */,
+				EAB1C7591CD2602800FE38D5 /* Controllers */,
 				EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */,
-				EA6C6BEB1CC7F0BF00E2C278 /* LaunchScreen.storyboard */,
 				EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */,
+				EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */,
 				EAB1C7171CC926E300FE38D5 /* Endpoint.swift */,
-				EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */,
 				EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */,
+				EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */,
 			);
 			path = MCTS3000;
+			sourceTree = "<group>";
+		};
+		EAB1C7581CD2601F00FE38D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */,
+				EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */,
+				EAB1C75C1CD2651700FE38D5 /* Stop.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EAB1C7591CD2602800FE38D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */,
+				EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EAB1C75A1CD2603400FE38D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA6C6BEB1CC7F0BF00E2C278 /* LaunchScreen.storyboard */,
+				EA6C6BE61CC7F0BF00E2C278 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
+				EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */,
+				EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */,
 				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
+				EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */,
 				EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */,
 				EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */,
 				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
@@ -340,6 +376,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EA6C6BD51CC7F0BF00E2C278 /* Project object */;
 }
