@@ -60,19 +60,19 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ikZ-e4-u9Y" id="2p7-00-WMU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ex5-no-9Nq">
-                                            <rect key="frame" x="43.5" y="8" width="548.5" height="27.5"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex5-no-9Nq">
+                                            <rect key="frame" x="44" y="8" width="549" height="28"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-8D-lRX">
-                                                    <rect key="frame" x="8" y="14" width="532.5" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-8D-lRX">
+                                                    <rect key="frame" x="8" y="14" width="533" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-kr-PSf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-kr-PSf">
                                                     <rect key="frame" x="8" y="0.0" width="540" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -80,9 +80,18 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="dfS-kr-PSf" firstAttribute="leading" secondItem="Xqi-8D-lRX" secondAttribute="leading" id="4xz-rn-7QE"/>
+                                                <constraint firstItem="Xqi-8D-lRX" firstAttribute="trailing" secondItem="ex5-no-9Nq" secondAttribute="trailingMargin" id="6LB-Hc-cQv"/>
+                                                <constraint firstAttribute="trailing" secondItem="dfS-kr-PSf" secondAttribute="trailing" constant="1" id="F1O-ew-SjK"/>
+                                                <constraint firstItem="dfS-kr-PSf" firstAttribute="top" secondItem="ex5-no-9Nq" secondAttribute="top" id="PMR-3d-h8r"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xqi-8D-lRX" secondAttribute="bottom" id="UfX-it-OXr"/>
+                                                <constraint firstItem="dfS-kr-PSf" firstAttribute="leading" secondItem="ex5-no-9Nq" secondAttribute="leadingMargin" id="X3t-xv-mxP"/>
+                                                <constraint firstAttribute="bottom" secondItem="dfS-kr-PSf" secondAttribute="bottom" constant="13" id="jLB-JE-Eif"/>
+                                            </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsZ-um-V6m">
-                                            <rect key="frame" x="8" y="8" width="27.5" height="27.5"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsZ-um-V6m">
+                                            <rect key="frame" x="8" y="8" width="28" height="28"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="xsZ-um-V6m" secondAttribute="height" multiplier="1:1" id="GsF-ZC-ZLE"/>
@@ -90,13 +99,13 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="leading" secondItem="xsZ-um-V6m" secondAttribute="trailing" constant="8" id="Gs6-38-gTY"/>
-                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="top" secondItem="2p7-00-WMU" secondAttribute="topMargin" id="Hma-m0-7ze"/>
-                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="leading" secondItem="xsZ-um-V6m" secondAttribute="trailing" constant="8" id="RIo-pl-SNp"/>
-                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="centerY" secondItem="2p7-00-WMU" secondAttribute="centerY" id="Vbe-w4-dJ4"/>
-                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="trailing" secondItem="2p7-00-WMU" secondAttribute="trailingMargin" id="j6p-J8-Feb"/>
-                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="bottom" secondItem="2p7-00-WMU" secondAttribute="bottomMargin" id="vUN-i5-l83"/>
-                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="leading" secondItem="2p7-00-WMU" secondAttribute="leadingMargin" id="yxx-Mo-Ze7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ex5-no-9Nq" secondAttribute="trailing" constant="-1" id="2vy-UY-cI0"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="top" secondItem="ex5-no-9Nq" secondAttribute="top" id="5Re-ty-ac5"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="leading" secondItem="2p7-00-WMU" secondAttribute="leadingMargin" id="RQP-eB-ZYU"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="bottom" secondItem="ex5-no-9Nq" secondAttribute="bottom" id="VyC-u2-agK"/>
+                                        <constraint firstItem="ex5-no-9Nq" firstAttribute="leading" secondItem="xsZ-um-V6m" secondAttribute="trailing" constant="8" symbolic="YES" id="Wxg-vw-vou"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="centerY" secondItem="2p7-00-WMU" secondAttribute="centerY" id="k8T-XI-73E"/>
+                                        <constraint firstItem="xsZ-um-V6m" firstAttribute="top" secondItem="2p7-00-WMU" secondAttribute="topMargin" id="soy-6d-LHY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
