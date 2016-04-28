@@ -30,7 +30,6 @@ private let PREDICTIONS_ENDPOINT = "getpredictions"
 private let PREDICTIONS_OBJECT = "prd"
 
 protocol Endpoint {
-    var method: Alamofire.Method { get }
     var endpoint: String { get }
     var params: [String: AnyObject]? { get }
 }
@@ -38,7 +37,7 @@ protocol Endpoint {
 extension Endpoint {
     func request(handler: (object: AnyObject?) -> ()) {
         //API + endpoint + "?key=" + API_KEY + "&format=json" + params
-        Alamofire.request(method, "\(API)\(endpoint)", parameters: params).responseJSON { (response) -> Void in
+        Alamofire.request(Alamofire.Method.GET, "\(API)\(endpoint)", parameters: params).responseJSON { (response) -> Void in
             handler(object: response.result.value)
         }
     }
@@ -46,24 +45,15 @@ extension Endpoint {
 
 
 class GetRoutes: Endpoint {
-    var method = Alamofire.Method.GET
     var endpoint = ROUTES_ENDPOINT
     var params = BASE_PARAMS
 }
 
-enum GetPredictions: Endpoint {
-    
-    case GetPredictions(String)
-    
-    var method: Alamofire.Method {
-        switch self {
-            case GetPredictions: return .GET
-        }
-    }
+class GetPredictions: Endpoint {
     var endpoint = PREDICTIONS_ENDPOINT
-    var params: [String: AnyObject]? {
-        switch self {
-            
-        }
+    var params = BASE_PARAMS
+    
+    init(withStopId stopId: String) {
+        params!["stpid"] = stopId
     }
 }
