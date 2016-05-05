@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -112,7 +113,7 @@
                                     <outlet property="lblName" destination="Xqi-8D-lRX" id="91Q-6k-pl8"/>
                                     <outlet property="lblNumber" destination="dfS-kr-PSf" id="NIs-kC-rvL"/>
                                     <outlet property="viewColor" destination="xsZ-um-V6m" id="Oee-FQ-JVG"/>
-                                    <segue destination="x9A-u9-ZQy" kind="show" id="Pn3-gb-Y7c"/>
+                                    <segue destination="ofM-mQ-3xo" kind="show" id="Pn3-gb-Y7c"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="1532" y="395"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="Gsb-PF-lvD">
             <objects>
-                <viewController id="x9A-u9-ZQy" sceneMemberID="viewController">
+                <viewController id="x9A-u9-ZQy" userLabel="Map" customClass="MapViewController" customModule="MCTS3000" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bcs-SM-Mme"/>
                         <viewControllerLayoutGuide type="bottom" id="SY9-NU-d12"/>
@@ -145,10 +146,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Map" id="Ndo-2L-Fcu">
+                        <barButtonItem key="leftBarButtonItem" title="Routes" id="B4X-Z0-GuN">
+                            <connections>
+                                <action selector="goToRoutes" destination="x9A-u9-ZQy" id="Qno-Hd-UbL"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Refresh" id="cEI-yd-die">
+                                <connections>
+                                    <action selector="refresh" destination="x9A-u9-ZQy" id="bx2-Ea-iFs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Show Stops" id="OPW-m1-NKL">
+                                <connections>
+                                    <action selector="showStops" destination="x9A-u9-ZQy" id="8Ca-uN-ofR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="WaN-fv-Evu" id="mva-Xj-wGB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bZ-o7-pkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="395"/>
+            <point key="canvasLocation" x="3054" y="395"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -187,6 +212,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcN-Go-NOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720" y="395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JfO-j7-4ud">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofM-mQ-3xo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tYy-lx-4TS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x9A-u9-ZQy" kind="relationship" relationship="rootViewController" id="ie3-LU-rBA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neb-le-HEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="395"/>
         </scene>
     </scenes>
     <resources>

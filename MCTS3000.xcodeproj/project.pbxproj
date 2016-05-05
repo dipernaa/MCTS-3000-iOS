@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		696D05CA1CDBEC7900E75A9F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696D05C91CDBEC7900E75A9F /* MapKit.framework */; };
+		696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D05CB1CDBEE7500E75A9F /* MapViewController.swift */; };
 		EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */; };
 		EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */; };
 		EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		696D05C91CDBEC7900E75A9F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		696D05CB1CDBEE7500E75A9F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EA6C6BDD1CC7F0BF00E2C278 /* MCTS3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCTS3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */,
 				EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */,
+				696D05CB1CDBEE7500E75A9F /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
 				EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */,
 				EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */,
+				696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */,
 				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
 				EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */,
