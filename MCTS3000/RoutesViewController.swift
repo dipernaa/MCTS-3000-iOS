@@ -45,6 +45,18 @@ class RoutesViewController: UITableViewController {
         cell.lblName.text = route?.name ?? "no route name"
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let route = routes?[indexPath.row]
+        
+        let name = route?.name ?? "no route name"
+        let number = route?.number ?? "no route number"
+        let color = route?.color ?? "no route color"
+        
+        print("Route: \(name) (\(number)) - \(color) ")
+    }
 
     func loadRoutes() {
         let getRoutes = GetRoutes()
