@@ -17,21 +17,35 @@ struct PredictionModel: Mappable {
     var predictionTime: String?
     var delay: Bool?
     var prediction: String?
+    var destination: String?
+    var zone: String?
+    var vid: String?
+    var timestamp: String?
+    var type: String?
+    var dstp: Int?
+    
     
     init?(_ map: Map) {
         
     }
     
     mutating func mapping(map: Map) {
-        stopId: String?
-        stopName: String?
-        route: String?
-        routeDir: String?
-        predictionTime: String?
-        delay: Bool?
-        prediction: String?
-        number <- map["rt"]
-        color <- map["rtclr"]
-        name <- map["rtnm"]
+        stopId <- map["stpid"]
+        stopName <- map["stpnm"]
+        route <- map["rt"]
+        routeDir <- map["rtdir"]
+        predictionTime <- map["prdtm"]
+        delay <- map["delay"]
+        prediction <- map["prdctdn"]
+        destination <- map["des"]
+        zone <- map["zone"]
+        vid <- map["vid"]
+        timestamp <- map["tmstmp"]
+        type <- map["typ"]
+        dstp <- map["dstp"]
+    }
+
+    func isDue() -> Bool {
+        return prediction == "DUE"
     }
 }
