@@ -70,19 +70,10 @@ extension MapViewController: MKMapViewDelegate {
             
             annotationView.enabled = true
             annotationView.image = UIImage(named: "arrow")
-            
-//            let rightButton = UIButton(type: .DetailDisclosure)
-//            rightButton.addTarget(self, action: Selector("showLocationDetails:"), forControlEvents: .TouchUpInside)
-//            annotationView.rightCalloutAccessoryView = rightButton
+
         } else {
             annotationView.annotation = annotation
         }
-        
-//        let button = annotationView.rightCalloutAccessoryView as! UIButton
-//        if let index = locations.indexOf(annotation as! Location) {
-//            button.tag = index
-//        }
-        
         return annotationView
     }
 }
