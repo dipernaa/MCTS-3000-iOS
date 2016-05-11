@@ -87,6 +87,9 @@
                                         <constraint firstItem="zRg-TV-1oc" firstAttribute="leading" secondItem="0QF-MT-TrD" secondAttribute="trailing" constant="8" id="roc-xa-A0C"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="prediction" destination="Vky-CB-InK" id="bnX-vX-3uC"/>
                                     <outlet property="routeDirection" destination="zRg-TV-1oc" id="lL7-2H-L2u"/>
@@ -203,7 +206,6 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="RrO-99-22a" kind="relationship" relationship="viewControllers" id="Dtn-YA-Pbe"/>
-                        <segue destination="RY1-vY-09v" kind="relationship" relationship="viewControllers" id="01i-it-4Eh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

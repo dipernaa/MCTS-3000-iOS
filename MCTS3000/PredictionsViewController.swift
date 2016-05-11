@@ -59,8 +59,11 @@ class PredictionsViewController: UITableViewController {
         
         return cell
     }
-
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
     func loadPredictions() {
         let getPredictions = GetPredictions(withStopId: "5132")
         getPredictions.request { [weak self] (object) -> () in
@@ -69,7 +72,6 @@ class PredictionsViewController: UITableViewController {
             }
             
             let results = object["bustime-response"]!["prd"]
-            print(results)
             self?.predictions = Mapper<PredictionModel>().mapArray(results)
             self?.tableView.reloadData()
         }
