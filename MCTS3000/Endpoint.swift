@@ -50,3 +50,13 @@ class GetRoutes: Endpoint {
     var endpoint = ROUTES_ENDPOINT
     var params = BASE_PARAMS
 }
+
+class GetVehicles: Endpoint {
+    var method = Alamofire.Method.GET
+    var endpoint = VEHICLES_ENDPOINT
+    var params = BASE_PARAMS
+
+    init(withRoute route: String) {
+        params!["rt"] = route
+    }
+}

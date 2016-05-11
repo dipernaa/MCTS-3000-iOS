@@ -93,5 +93,14 @@ class RoutesViewController: UITableViewController {
             alpha: CGFloat(1.0)
         )
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        let controller = navigationController.topViewController as! MapViewController
+        if let indexPath = tableView.indexPathForCell( sender as! UITableViewCell) {
+            controller.routeToLoad = routes![indexPath.row]
+        }
+
+    }
 }
 
