@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FavoritesViewController: UITableViewController {
-
+    
+    let realm = try! Realm()
+    lazy var stops: Results<Stop> = { self.realm.objects(Stop) }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +24,16 @@ class FavoritesViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("StopCell", forIndexPath: indexPath) as? StopCell else {
+            fatalError("THIS SHOULD NEVER HAPPEN")
+        }
+        
+        let stop = stops[indexPath.row]
+        print("\(stop.stopName)")
+        cell.lblName.text = stop.stopName
+        return cell
+    }
 }
 
