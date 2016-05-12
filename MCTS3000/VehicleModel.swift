@@ -13,7 +13,7 @@ import MapKit
 class VehicleModel: NSObject, Mappable, MKAnnotation {
     var lat: String?
     var lon: String?
-    var heading: Int?
+    var heading: String?
     var vid: Int?
     
     

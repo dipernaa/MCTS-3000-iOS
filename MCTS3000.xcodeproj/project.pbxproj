@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		696D05CA1CDBEC7900E75A9F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696D05C91CDBEC7900E75A9F /* MapKit.framework */; };
 		696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D05CB1CDBEE7500E75A9F /* MapViewController.swift */; };
+		69B255251CE4E34B001B5AAD /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B255241CE4E34B001B5AAD /* ImageRotation.swift */; };
 		EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */; };
 		EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */; };
 		EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		696D05C91CDBEC7900E75A9F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		696D05CB1CDBEE7500E75A9F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		69B255241CE4E34B001B5AAD /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRotation.swift; sourceTree = "<group>"; };
 		EA6C6BDD1CC7F0BF00E2C278 /* MCTS3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCTS3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				EAB1C7171CC926E300FE38D5 /* Endpoint.swift */,
 				EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */,
 				EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */,
+				69B255241CE4E34B001B5AAD /* ImageRotation.swift */,
 			);
 			path = MCTS3000;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
+				69B255251CE4E34B001B5AAD /* ImageRotation.swift in Sources */,
 				EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */,
 				EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */,
 				696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */,

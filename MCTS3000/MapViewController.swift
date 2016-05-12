@@ -52,6 +52,7 @@ class MapViewController: UIViewController {
             }
             
             let results = object["bustime-response"]!["vehicle"]
+            print(results)
             self?.vehicles = Mapper<VehicleModel>().mapArray(results)
             self!.mapView.addAnnotations((self?.vehicles)!)
         }
@@ -65,12 +66,19 @@ extension MapViewController: MKMapViewDelegate {
         
         let identifier = "Location"
         var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as MKAnnotationView!
+        
+        
+        
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             
-            annotationView.enabled = true
-            annotationView.image = UIImage(named: "arrow")
-
+            if let vehicleView = annotation as? VehicleModel {
+                var image = UIImage(named: "arrow")
+            
+                image = image?.imageRotatedByDegrees(CGFloat(Int(vehicleView.heading!)!), flip: false)
+                annotationView.enabled = true
+                annotationView.image = image
+            }
         } else {
             annotationView.annotation = annotation
         }
