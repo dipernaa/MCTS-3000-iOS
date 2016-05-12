@@ -32,19 +32,11 @@ class MapViewController: UIViewController {
         
     }
     
-    @IBAction func refresh() {
-        mapView.delegate = self
-        let region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 1000, 1000)
-        mapView.setRegion(mapView.regionThatFits(region), animated: true)
-        
-    }
-    
     @IBAction func goToRoutes() {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func loadVehicles() {
-        
+    @IBAction func loadVehicles() {
         let getPredictions = GetVehicles(withRoute: routeToLoad!.number!)
         getPredictions.request { [weak self] (object) -> () in
             guard let object = object as? [String: AnyObject] else {
