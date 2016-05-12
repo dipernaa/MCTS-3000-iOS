@@ -27,13 +27,13 @@ class PredictionsViewController: UITableViewController {
     }
     
     @IBAction func saveFavorite() {
-        print("trying to save")
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(stop!)
-            print(stop)
-            print("saving")
+        if let stop = stop {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(stop)
+            }
         }
+        
     }
     
     @IBAction func back() {
