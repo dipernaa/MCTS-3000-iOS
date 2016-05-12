@@ -54,7 +54,24 @@ class FavoritesViewController: UITableViewController {
     func loadStops() {
         let realm = try! Realm()
         stops = { realm.objects(Stop) }()
+        let random = Stop()
+        random.latitude = 10
+        random.longitude = 10
+        random.stopId = "4331"
+        random.stopName = "heyo!"
+        try! realm.write {
+            realm.add(random)
+        }
         tableView.reloadData()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        let controller = navigationController.topViewController as! PredictionsViewController
+        if let indexPath = tableView.indexPathForCell( sender as! UITableViewCell) {
+            controller.stop = stops![indexPath.row]
+        }
     }
 }
 

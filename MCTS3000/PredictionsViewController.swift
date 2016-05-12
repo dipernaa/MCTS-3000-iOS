@@ -8,11 +8,12 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
 
 class PredictionsViewController: UITableViewController {
     
     var predictions: [PredictionModel]?
-    var stopId: String?
+    var stop: Stop?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,17 @@ class PredictionsViewController: UITableViewController {
     }
     
     @IBAction func saveFavorite() {
-        
+        print("trying to save")
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(stop!)
+            print(stop)
+            print("saving")
+        }
+    }
+    
+    @IBAction func back() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,13 +76,14 @@ class PredictionsViewController: UITableViewController {
     }
 
     func loadPredictions() {
-        let getPredictions = GetPredictions(withStopId: "5132")
+        let getPredictions = GetPredictions(withStopId: stop!.stopId)
         getPredictions.request { [weak self] (object) -> () in
             guard let object = object as? [String: AnyObject] else {
                 return
             }
             
             let results = object["bustime-response"]!["prd"]
+            print(object["bustime-response"])
             self?.predictions = Mapper<PredictionModel>().mapArray(results)
             self?.tableView.reloadData()
         }

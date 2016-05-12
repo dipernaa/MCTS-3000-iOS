@@ -20,6 +20,9 @@
 		EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */; };
 		F22C18B01CD2654000B16CE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18AF1CD2654000B16CE2 /* Alamofire.framework */; };
 		F22C18B21CD2654300B16CE2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */; };
+		F25AE3F41CE4D51400241B31 /* PredictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F11CE4D51400241B31 /* PredictionCell.swift */; };
+		F25AE3F51CE4D51400241B31 /* PredictionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F21CE4D51400241B31 /* PredictionModel.swift */; };
+		F25AE3F61CE4D51400241B31 /* PredictionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		F22C18AF1CD2654000B16CE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		F25AE3F11CE4D51400241B31 /* PredictionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionCell.swift; sourceTree = "<group>"; };
+		F25AE3F21CE4D51400241B31 /* PredictionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionModel.swift; sourceTree = "<group>"; };
+		F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */,
 				EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */,
 				EAB1C7171CC926E300FE38D5 /* Endpoint.swift */,
+				F25AE3F11CE4D51400241B31 /* PredictionCell.swift */,
 				EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */,
 				EA79BB661CE3B15600F8E875 /* StopCell.swift */,
 			);
@@ -90,6 +97,7 @@
 		EAB1C7581CD2601F00FE38D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F25AE3F21CE4D51400241B31 /* PredictionModel.swift */,
 				EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */,
 				EA79BB641CE3A92C00F8E875 /* Stop.swift */,
 			);
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6C6BE21CC7F0BF00E2C278 /* FavoritesViewController.swift */,
+				F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */,
 				EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */,
 			);
 			name = Controllers;
@@ -206,11 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25AE3F51CE4D51400241B31 /* PredictionModel.swift in Sources */,
 				EA79BB651CE3A92C00F8E875 /* Stop.swift in Sources */,
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
 				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
+				F25AE3F61CE4D51400241B31 /* PredictionsViewController.swift in Sources */,
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
 				EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */,
+				F25AE3F41CE4D51400241B31 /* PredictionCell.swift in Sources */,
 				EA6C6BE31CC7F0BF00E2C278 /* FavoritesViewController.swift in Sources */,
 				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
 				EA79BB671CE3B15600F8E875 /* StopCell.swift in Sources */,

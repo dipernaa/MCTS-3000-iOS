@@ -81,5 +81,6 @@ class RoutesViewController: UITableViewController {
             alpha: CGFloat(1.0)
         )
     }
+
 }
 
