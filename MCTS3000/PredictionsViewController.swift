@@ -87,7 +87,6 @@ class PredictionsViewController: UITableViewController {
             }
             
             let results = object["bustime-response"]!["prd"]
-            print(object["bustime-response"])
             self?.predictions = Mapper<PredictionModel>().mapArray(results)
             self?.tableView.reloadData()
         }
