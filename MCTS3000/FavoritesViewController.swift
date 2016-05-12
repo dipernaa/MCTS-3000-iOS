@@ -54,14 +54,6 @@ class FavoritesViewController: UITableViewController {
     func loadStops() {
         let realm = try! Realm()
         stops = { realm.objects(Stop) }()
-        let random = Stop()
-        random.latitude = 10
-        random.longitude = 10
-        random.stopId = "4331"
-        random.stopName = "heyo!"
-        try! realm.write {
-            realm.add(random)
-        }
         tableView.reloadData()
     }
     

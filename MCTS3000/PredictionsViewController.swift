@@ -17,8 +17,12 @@ class PredictionsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPredictions()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        loadPredictions()
     }
     
     override func didReceiveMemoryWarning() {
