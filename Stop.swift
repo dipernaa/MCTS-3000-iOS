@@ -2,16 +2,23 @@
 //  Stop.swift
 //  MCTS3000
 //
-//  Created by Tony DiPerna on 4/28/16.
+//  Created by Tony DiPerna on 5/11/16.
 //  Copyright © 2016 MSOE SE-4910i. All rights reserved.
 //
 
 import Foundation
-import CoreData
+import RealmSwift
 
-
-class Stop: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class Stop: Object {
+    
+    dynamic var stopId = "";
+    dynamic var stopName = "";
+    dynamic var latitude: Double = 0.0;
+    dynamic var longitude: Double = 0.0;
+    
+// Specify properties to ignore (Realm won't persist these)
+    
+//  override static func ignoredProperties() -> [String] {
+//    return []
+//  }
 }
