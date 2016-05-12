@@ -56,5 +56,14 @@ class FavoritesViewController: UITableViewController {
         stops = { realm.objects(Stop) }()
         tableView.reloadData()
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        let controller = navigationController.topViewController as! PredictionsViewController
+        if let indexPath = tableView.indexPathForCell( sender as! UITableViewCell) {
+            controller.stop = stops![indexPath.row]
+        }
+    }
 }
 
