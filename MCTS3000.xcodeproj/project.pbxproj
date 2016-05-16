@@ -25,6 +25,7 @@
 		F22C18B01CD2654000B16CE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18AF1CD2654000B16CE2 /* Alamofire.framework */; };
 		F22C18B21CD2654300B16CE2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */; };
 		F26038ED1CE3A6E300975783 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26038EC1CE3A6E300975783 /* VehicleModel.swift */; };
+		F29C78E01CEA45C3004BF4E3 /* DirectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F22C18AF1CD2654000B16CE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		F26038EC1CE3A6E300975783 /* VehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */,
 				EAB1C75C1CD2651700FE38D5 /* Stop.swift */,
 				F26038EC1CE3A6E300975783 /* VehicleModel.swift */,
+				F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
 				EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */,
 				EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */,
+				F29C78E01CEA45C3004BF4E3 /* DirectionModel.swift in Sources */,
 				EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */,
 				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
 			);

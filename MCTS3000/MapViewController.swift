@@ -18,12 +18,14 @@ class MapViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext!
     var routeToLoad: RouteModel?
     var vehicles: [VehicleModel]?
+    var directions: [DirectionModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let route = routeToLoad {
             print(route.name)
+            loadDirections()
             loadVehicles()
         }
     }
@@ -47,6 +49,33 @@ class MapViewController: UIViewController {
             print(results)
             self?.vehicles = Mapper<VehicleModel>().mapArray(results)
             self!.mapView.addAnnotations((self?.vehicles)!)
+        }
+
+    }
+    
+    func loadDirections() {
+        let getDirections = GetDirections(withRoute: routeToLoad!.number!)
+        getDirections.request { [weak self] (object) -> () in
+            guard let object = object as? [String: AnyObject] else {
+                return
+            }
+            
+            let results = object["bustime-response"]!["directions"]
+            print(results)
+            self?.directions = Mapper<DirectionModel>().mapArray(results)
+        }
+    }
+    
+    func loadStops(direction: String) {
+        let getStops = GetStops(withRoute: routeToLoad!.number!, direction: direction)
+        getStops.request { [weak self] (object) -> () in
+            guard let object = object as? [String: AnyObject] else {
+                return
+            }
+            
+            let results = object["bustime-response"]!["stops"]
+            print(results)
+//            self?.stops = Mapper<StopModel>().mapArray(results)
         }
 
     }
