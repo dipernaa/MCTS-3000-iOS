@@ -162,11 +162,8 @@
                                     <action selector="loadVehicles" destination="x9A-u9-ZQy" id="CGb-bk-Vhf"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Show Stops" id="OPW-m1-NKL">
-                                <connections>
-                                    <action selector="showStops" destination="x9A-u9-ZQy" id="8Ca-uN-ofR"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem title="Second" id="SNr-1J-ByD"/>
+                            <barButtonItem title="First" id="AJw-Vx-5ej"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
