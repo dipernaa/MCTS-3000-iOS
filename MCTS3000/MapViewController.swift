@@ -70,7 +70,9 @@ extension MapViewController: MKMapViewDelegate {
                 image = image?.imageRotatedByDegrees(CGFloat(Int(vehicleView.heading!)!), flip: false)
                 annotationView.enabled = true
                 annotationView.image = image
+                annotationView.frame.size = CGSize(width: 20.0, height: 20.0)
             }
+            
         } else {
             annotationView.annotation = annotation
         }
