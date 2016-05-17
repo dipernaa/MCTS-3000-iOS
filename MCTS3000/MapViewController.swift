@@ -14,11 +14,15 @@ import ObjectMapper
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var firstButton: UIBarButtonItem!
+    @IBOutlet weak var secondButton: UIBarButtonItem!
     
     var managedObjectContext: NSManagedObjectContext!
     var routeToLoad: RouteModel?
     var vehicles: [VehicleModel]?
     var directions: [DirectionModel]?
+    var stops: [Stop]?
+    var stop: Stop?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +34,12 @@ class MapViewController: UIViewController {
         }
     }
     
-    @IBAction func showStops() {
-        
+    @IBAction func showFirstStops() {
+        loadStops(directions![0].direction!)
+    }
+    
+    @IBAction func showSecondStops() {
+        loadStops(directions![1].direction!)
     }
     
     @IBAction func goToRoutes() {
@@ -63,6 +71,8 @@ class MapViewController: UIViewController {
             let results = object["bustime-response"]!["directions"]
             print(results)
             self?.directions = Mapper<DirectionModel>().mapArray(results)
+            self!.firstButton.title = self?.directions![0].direction!
+            self!.secondButton.title = self?.directions![1].direction!
         }
     }
     
@@ -75,9 +85,19 @@ class MapViewController: UIViewController {
             
             let results = object["bustime-response"]!["stops"]
             print(results)
-//            self?.stops = Mapper<StopModel>().mapArray(results)
+            self?.stops = Mapper<Stop>().mapArray(results)
+            print(self?.stops)
+            self!.mapView.addAnnotations((self?.stops)!)
         }
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "stopClicked" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! PredictionsViewController
+            controller.stop = stop
+        }
     }
 }
 
@@ -95,16 +115,31 @@ extension MapViewController: MKMapViewDelegate {
             
             if let vehicleView = annotation as? VehicleModel {
                 var image = UIImage(named: "arrow")
-                annotationView.frame.size = CGSize(width: 20.0, height: 20.0)
                 image = image?.imageRotatedByDegrees(CGFloat(Int(vehicleView.heading!)!), flip: false)
                 annotationView.enabled = true
                 annotationView.image = image
+                annotationView.frame.size = CGSize(width: 20.0, height: 20.0)
+            }
+            
+            if annotation is Stop {
+                let image = UIImage(named: "circle")
+                annotationView.enabled = true
+                annotationView.image = image
+                annotationView.frame.size = CGSize(width: 10.0, height: 10.0)
             }
             
         } else {
             annotationView.annotation = annotation
         }
         return annotationView
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView annotationView: MKAnnotationView) {
+        
+        if let annotation = annotationView.annotation as? Stop {
+            stop = annotation
+            self.performSegueWithIdentifier("stopClicked", sender: self)
+        }
     }
 }
 

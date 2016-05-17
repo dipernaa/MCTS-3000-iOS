@@ -241,18 +241,29 @@
                                     <action selector="loadVehicles" destination="x9A-u9-ZQy" id="CGb-bk-Vhf"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Second" id="SNr-1J-ByD"/>
-                            <barButtonItem title="First" id="AJw-Vx-5ej"/>
+                            <barButtonItem title="Second" id="SNr-1J-ByD">
+                                <connections>
+                                    <action selector="showSecondStops" destination="x9A-u9-ZQy" id="Z6W-a2-vBL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="First" id="AJw-Vx-5ej">
+                                <connections>
+                                    <action selector="showFirstStops" destination="x9A-u9-ZQy" id="osh-cn-N5C"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="firstButton" destination="AJw-Vx-5ej" id="NCM-hk-xUH"/>
                         <outlet property="mapView" destination="WaN-fv-Evu" id="mva-Xj-wGB"/>
+                        <outlet property="secondButton" destination="SNr-1J-ByD" id="chX-aD-vwW"/>
+                        <segue destination="CMV-Ex-ICQ" kind="show" identifier="stopClicked" id="b44-Di-EKV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bZ-o7-pkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="395"/>
+            <point key="canvasLocation" x="2950" y="395"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -333,4 +344,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="b44-Di-EKV"/>
+    </inferredMetricsTieBreakers>
 </document>

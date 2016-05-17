@@ -32,9 +32,14 @@ class PredictionsViewController: UITableViewController {
     
     @IBAction func saveFavorite() {
         if let stop = stop {
+            let new = Stop()
+            new.lat = stop.lat
+            new.lon = stop.lon
+            new.stopId = stop.stopId
+            new.stopName = stop.stopName
             let realm = try! Realm()
             try! realm.write {
-                realm.add(stop)
+                realm.add(new)
             }
         }
         

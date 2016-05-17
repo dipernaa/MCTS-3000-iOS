@@ -11,6 +11,7 @@
 		696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D05CB1CDBEE7500E75A9F /* MapViewController.swift */; };
 		69B255251CE4E34B001B5AAD /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B255241CE4E34B001B5AAD /* ImageRotation.swift */; };
 		EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */; };
+		EA6C6BE31CC7F0BF00E2C278 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE21CC7F0BF00E2C278 /* FavoritesViewController.swift */; };
 		EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */; };
 		EA6C6BE81CC7F0BF00E2C278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE61CC7F0BF00E2C278 /* Main.storyboard */; };
 		EA6C6BEA1CC7F0BF00E2C278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 		F25AE3F51CE4D51400241B31 /* PredictionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F21CE4D51400241B31 /* PredictionModel.swift */; };
 		F25AE3F61CE4D51400241B31 /* PredictionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */; };
 		F26038ED1CE3A6E300975783 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26038EC1CE3A6E300975783 /* VehicleModel.swift */; };
+		F263AD1A1CEBC6BD00F0E910 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F263AD191CEBC6BD00F0E910 /* Realm.framework */; };
+		F263AD1C1CEBC6C200F0E910 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F263AD1B1CEBC6C200F0E910 /* RealmSwift.framework */; };
 		F29C78E01CEA45C3004BF4E3 /* DirectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,8 @@
 		F25AE3F21CE4D51400241B31 /* PredictionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionModel.swift; sourceTree = "<group>"; };
 		F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionsViewController.swift; sourceTree = "<group>"; };
 		F26038EC1CE3A6E300975783 /* VehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		F263AD191CEBC6BD00F0E910 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		F263AD1B1CEBC6C200F0E910 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +68,8 @@
 				696D05CA1CDBEC7900E75A9F /* MapKit.framework in Frameworks */,
 				F22C18B01CD2654000B16CE2 /* Alamofire.framework in Frameworks */,
 				F22C18B21CD2654300B16CE2 /* ObjectMapper.framework in Frameworks */,
+				F263AD1A1CEBC6BD00F0E910 /* Realm.framework in Frameworks */,
+				F263AD1C1CEBC6C200F0E910 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,8 @@
 		EA6C6BD41CC7F0BF00E2C278 = {
 			isa = PBXGroup;
 			children = (
+				F263AD1B1CEBC6C200F0E910 /* RealmSwift.framework */,
+				F263AD191CEBC6BD00F0E910 /* Realm.framework */,
 				696D05C91CDBEC7900E75A9F /* MapKit.framework */,
 				F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */,
 				F22C18AF1CD2654000B16CE2 /* Alamofire.framework */,
@@ -244,6 +253,7 @@
 				EADBF14E1CE4E1B600CF8F11 /* Stop.swift in Sources */,
 				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
 				EA79BB671CE3B15600F8E875 /* StopCell.swift in Sources */,
+				EA6C6BE31CC7F0BF00E2C278 /* FavoritesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
