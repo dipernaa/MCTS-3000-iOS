@@ -95,11 +95,10 @@ extension MapViewController: MKMapViewDelegate {
             
             if let vehicleView = annotation as? VehicleModel {
                 var image = UIImage(named: "arrow")
-            
+                annotationView.frame.size = CGSize(width: 20.0, height: 20.0)
                 image = image?.imageRotatedByDegrees(CGFloat(Int(vehicleView.heading!)!), flip: false)
                 annotationView.enabled = true
                 annotationView.image = image
-                annotationView.frame.size = CGSize(width: 20.0, height: 20.0)
             }
             
         } else {

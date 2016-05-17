@@ -11,19 +11,20 @@
 		696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D05CB1CDBEE7500E75A9F /* MapViewController.swift */; };
 		69B255251CE4E34B001B5AAD /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B255241CE4E34B001B5AAD /* ImageRotation.swift */; };
 		EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */; };
-		EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */; };
 		EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */; };
 		EA6C6BE81CC7F0BF00E2C278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE61CC7F0BF00E2C278 /* Main.storyboard */; };
 		EA6C6BEA1CC7F0BF00E2C278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */; };
 		EA6C6BED1CC7F0BF00E2C278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6C6BEB1CC7F0BF00E2C278 /* LaunchScreen.storyboard */; };
+		EA79BB671CE3B15600F8E875 /* StopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA79BB661CE3B15600F8E875 /* StopCell.swift */; };
 		EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7171CC926E300FE38D5 /* Endpoint.swift */; };
 		EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */; };
 		EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */; };
-		EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */; };
-		EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */; };
-		EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1C75C1CD2651700FE38D5 /* Stop.swift */; };
+		EADBF14E1CE4E1B600CF8F11 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBF14D1CE4E1B600CF8F11 /* Stop.swift */; };
 		F22C18B01CD2654000B16CE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18AF1CD2654000B16CE2 /* Alamofire.framework */; };
 		F22C18B21CD2654300B16CE2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */; };
+		F25AE3F41CE4D51400241B31 /* PredictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F11CE4D51400241B31 /* PredictionCell.swift */; };
+		F25AE3F51CE4D51400241B31 /* PredictionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F21CE4D51400241B31 /* PredictionModel.swift */; };
+		F25AE3F61CE4D51400241B31 /* PredictionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */; };
 		F26038ED1CE3A6E300975783 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26038EC1CE3A6E300975783 /* VehicleModel.swift */; };
 		F29C78E01CEA45C3004BF4E3 /* DirectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */; };
 /* End PBXBuildFile section */
@@ -34,20 +35,22 @@
 		69B255241CE4E34B001B5AAD /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRotation.swift; sourceTree = "<group>"; };
 		EA6C6BDD1CC7F0BF00E2C278 /* MCTS3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCTS3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		EA6C6BE21CC7F0BF00E2C278 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		EA6C6BE71CC7F0BF00E2C278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA6C6BE91CC7F0BF00E2C278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA6C6BEC1CC7F0BF00E2C278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA79BB661CE3B15600F8E875 /* StopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopCell.swift; sourceTree = "<group>"; };
 		EAB1C7171CC926E300FE38D5 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
-		EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Stop+CoreDataProperties.swift"; path = "../Stop+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EAB1C75C1CD2651700FE38D5 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stop.swift; path = ../Stop.swift; sourceTree = "<group>"; };
+		EADBF14D1CE4E1B600CF8F11 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		F22C18AF1CD2654000B16CE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F22C18B11CD2654300B16CE2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		F25AE3F11CE4D51400241B31 /* PredictionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionCell.swift; sourceTree = "<group>"; };
+		F25AE3F21CE4D51400241B31 /* PredictionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionModel.swift; sourceTree = "<group>"; };
+		F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionsViewController.swift; sourceTree = "<group>"; };
 		F26038EC1CE3A6E300975783 /* VehicleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,9 +98,10 @@
 				EA6C6BEE1CC7F0BF00E2C278 /* Info.plist */,
 				EA6C6BE01CC7F0BF00E2C278 /* AppDelegate.swift */,
 				EAB1C7171CC926E300FE38D5 /* Endpoint.swift */,
+				F25AE3F11CE4D51400241B31 /* PredictionCell.swift */,
 				EAB1C71B1CC935C300FE38D5 /* RouteCell.swift */,
-				EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */,
 				69B255241CE4E34B001B5AAD /* ImageRotation.swift */,
+				EA79BB661CE3B15600F8E875 /* StopCell.swift */,
 			);
 			path = MCTS3000;
 			sourceTree = "<group>";
@@ -105,11 +109,11 @@
 		EAB1C7581CD2601F00FE38D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F25AE3F21CE4D51400241B31 /* PredictionModel.swift */,
 				EAB1C7191CC9301A00FE38D5 /* RouteModel.swift */,
-				EAB1C75B1CD2651700FE38D5 /* Stop+CoreDataProperties.swift */,
-				EAB1C75C1CD2651700FE38D5 /* Stop.swift */,
 				F26038EC1CE3A6E300975783 /* VehicleModel.swift */,
 				F29C78DF1CEA45C3004BF4E3 /* DirectionModel.swift */,
+				EADBF14D1CE4E1B600CF8F11 /* Stop.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -117,7 +121,8 @@
 		EAB1C7591CD2602800FE38D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA6C6BE21CC7F0BF00E2C278 /* FirstViewController.swift */,
+				EA6C6BE21CC7F0BF00E2C278 /* FavoritesViewController.swift */,
+				F25AE3F31CE4D51400241B31 /* PredictionsViewController.swift */,
 				EA6C6BE41CC7F0BF00E2C278 /* RoutesViewController.swift */,
 				696D05CB1CDBEE7500E75A9F /* MapViewController.swift */,
 			);
@@ -209,6 +214,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -223,19 +230,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25AE3F51CE4D51400241B31 /* PredictionModel.swift in Sources */,
 				EA6C6BE51CC7F0BF00E2C278 /* RoutesViewController.swift in Sources */,
 				69B255251CE4E34B001B5AAD /* ImageRotation.swift in Sources */,
-				EAB1C75D1CD2651700FE38D5 /* Stop+CoreDataProperties.swift in Sources */,
-				EAB1C75E1CD2651700FE38D5 /* Stop.swift in Sources */,
 				696D05CC1CDBEE7500E75A9F /* MapViewController.swift in Sources */,
-				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
 				F26038ED1CE3A6E300975783 /* VehicleModel.swift in Sources */,
+				EA6C6BE11CC7F0BF00E2C278 /* AppDelegate.swift in Sources */,
+				F25AE3F61CE4D51400241B31 /* PredictionsViewController.swift in Sources */,
 				EAB1C7181CC926E300FE38D5 /* Endpoint.swift in Sources */,
-				EAB1C7571CD25FFB00FE38D5 /* DataModel.xcdatamodeld in Sources */,
 				EAB1C71A1CC9301A00FE38D5 /* RouteModel.swift in Sources */,
 				F29C78E01CEA45C3004BF4E3 /* DirectionModel.swift in Sources */,
-				EA6C6BE31CC7F0BF00E2C278 /* FirstViewController.swift in Sources */,
+				F25AE3F41CE4D51400241B31 /* PredictionCell.swift in Sources */,
+				EADBF14E1CE4E1B600CF8F11 /* Stop.swift in Sources */,
 				EAB1C71C1CC935C300FE38D5 /* RouteCell.swift in Sources */,
+				EA79BB671CE3B15600F8E875 /* StopCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,20 +404,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EAB1C7551CD25FFB00FE38D5 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = EAB1C7561CD25FFB00FE38D5 /* DataModel.xcdatamodel */;
-			name = DataModel.xcdatamodeld;
-			path = ../DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EA6C6BD51CC7F0BF00E2C278 /* Project object */;
 }
