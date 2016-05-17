@@ -125,7 +125,7 @@ extension MapViewController: MKMapViewDelegate {
                 let image = UIImage(named: "circle")
                 annotationView.enabled = true
                 annotationView.image = image
-                annotationView.frame.size = CGSize(width: 10.0, height: 10.0)
+                annotationView.frame.size = CGSize(width: 5.0, height: 5.0)
             }
             
         } else {
