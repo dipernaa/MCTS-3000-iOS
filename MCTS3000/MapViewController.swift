@@ -28,18 +28,13 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let center = CLLocationCoordinate2D(latitude: 43.0389, longitude: -87.9065)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
+        mapView.regionThatFits(region)
+        mapView.setRegion(region, animated: false)
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-        
-        mapView.showsUserLocation = true
-        
-        if let route = routeToLoad {
-            print(route.name)
+        if routeToLoad != nil {
             loadDirections()
             loadVehicles()
         }
@@ -65,7 +60,6 @@ class MapViewController: UIViewController {
             }
             
             let results = object["bustime-response"]!["vehicle"]
-            print(results)
             self?.vehicles = Mapper<VehicleModel>().mapArray(results)
             self!.mapView.addAnnotations((self?.vehicles)!)
         }
@@ -81,7 +75,6 @@ class MapViewController: UIViewController {
             }
             
             let results = object["bustime-response"]!["directions"]
-            print(results)
             self?.directions = Mapper<DirectionModel>().mapArray(results)
             self!.firstButton.title = self?.directions![0].direction!
             self!.secondButton.title = self?.directions![1].direction!
@@ -96,9 +89,7 @@ class MapViewController: UIViewController {
             }
             
             let results = object["bustime-response"]!["stops"]
-            print(results)
             self?.stops = Mapper<Stop>().mapArray(results)
-            print(self?.stops)
             self!.mapView.addAnnotations((self?.stops)!)
         }
 
@@ -163,11 +154,11 @@ extension MapViewController: UINavigationBarDelegate {
     }
 }
 
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
-        let location = location.last! as CLLocation
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        mapView.setRegion(region, animated: true)
-    }
-}
+//extension MapViewController: CLLocationManagerDelegate {
+//    func locationManager(manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
+//        let location = location.last! as CLLocation
+//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//        mapView.setRegion(region, animated: true)
+//    }
+//}
