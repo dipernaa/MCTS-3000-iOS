@@ -24,8 +24,19 @@ class MapViewController: UIViewController {
     var stops: [Stop]?
     var stop: Stop?
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+        mapView.showsUserLocation = true
         
         if let route = routeToLoad {
             print(route.name)
@@ -58,8 +69,9 @@ class MapViewController: UIViewController {
             self?.vehicles = Mapper<VehicleModel>().mapArray(results)
             self!.mapView.addAnnotations((self?.vehicles)!)
         }
-
     }
+    
+    
     
     func loadDirections() {
         let getDirections = GetDirections(withRoute: routeToLoad!.number!)
@@ -99,6 +111,8 @@ class MapViewController: UIViewController {
             controller.stop = stop
         }
     }
+    
+    
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -146,5 +160,14 @@ extension MapViewController: MKMapViewDelegate {
 extension MapViewController: UINavigationBarDelegate {
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
         return .TopAttached
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
+        let location = location.last! as CLLocation
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: true)
     }
 }
