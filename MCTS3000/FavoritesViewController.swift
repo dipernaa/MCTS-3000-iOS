@@ -51,6 +51,18 @@ class FavoritesViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        let stop = stops?[indexPath.row]
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(stop!)
+        }
+        
+        let indexPaths = [indexPath]
+        tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    }
+    
     func loadStops() {
         let realm = try! Realm()
         stops = { realm.objects(Stop) }()

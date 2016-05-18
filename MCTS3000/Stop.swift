@@ -8,13 +8,35 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
+import MapKit
+import Realm
 
-class Stop: Object {
+class Stop: Object, Mappable, MKAnnotation {
     
-    dynamic var stopId = "";
-    dynamic var stopName = "";
-    dynamic var latitude: Double = 0.0;
-    dynamic var longitude: Double = 0.0;
+    dynamic var stopId = ""
+    dynamic var stopName = ""
+    dynamic var lat: Double = 0.0
+    dynamic var lon: Double = 0.0
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        lat <- map["lat"]
+        lon <- map["lon"]
+        stopId <- map["stpid"]
+        stopName <- map["stpnm"]
+    }
+    
+    @objc var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(lat, lon)
+    }
+    
+    @objc var title: String? {
+        return stopId
+    }
     
 // Specify properties to ignore (Realm won't persist these)
     

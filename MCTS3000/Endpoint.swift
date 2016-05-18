@@ -49,6 +49,34 @@ class GetRoutes: Endpoint {
     var params = BASE_PARAMS
 }
 
+class GetVehicles: Endpoint {
+    var endpoint = VEHICLES_ENDPOINT
+    var params = BASE_PARAMS
+
+    init(withRoute route: String) {
+        params!["rt"] = route
+    }
+}
+
+class GetDirections: Endpoint {
+    var endpoint = DIRECTIONS_ENDPOINT
+    var params = BASE_PARAMS
+    
+    init(withRoute route: String) {
+        params!["rt"] = route
+    }
+}
+
+class GetStops: Endpoint {
+    var endpoint = STOPS_ENDPOINT
+    var params = BASE_PARAMS
+    
+    init(withRoute route: String, direction: String) {
+        params!["rt"] = route
+        params!["dir"] = direction
+    }
+}
+
 class GetPredictions: Endpoint {
     var endpoint = PREDICTIONS_ENDPOINT
     var params = BASE_PARAMS
