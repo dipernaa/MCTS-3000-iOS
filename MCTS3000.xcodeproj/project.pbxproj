@@ -158,7 +158,6 @@
 				EA6C6BDA1CC7F0BF00E2C278 /* Frameworks */,
 				EA6C6BDB1CC7F0BF00E2C278 /* Resources */,
 				EAB1C7161CC9242A00FE38D5 /* ShellScript */,
-				EAC51AB81CEF4F88007EF151 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -232,19 +231,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		EAC51AB81CEF4F88007EF151 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
